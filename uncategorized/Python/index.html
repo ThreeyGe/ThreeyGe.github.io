@@ -15,10 +15,12 @@
 <meta property="og:site_name" content="一个爱分享的博客">
 <meta property="og:description" content="第一章：Python基础">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181225114514504.png">
 <meta property="article:published_time" content="2020-03-18T04:51:09.680Z">
-<meta property="article:modified_time" content="2020-03-18T08:06:21.434Z">
+<meta property="article:modified_time" content="2020-03-18T15:46:10.984Z">
 <meta property="article:author" content="10+1B">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181225114514504.png">
   
     <link rel="alternative" href="/atom.xml" title="一个爱分享的博客" type="application/atom+xml">
   
@@ -47,7 +49,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="http://img.jk51.com/img_jk51/122342132.jpeg" class="js-avatar">
+			<img src="/img/tx.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">10+1B</a></h1>
@@ -105,7 +107,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="http://img.jk51.com/img_jk51/122342132.jpeg" class="js-avatar">
+				<img src="/img/tx.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">10+1B</h1>
@@ -251,7 +253,55 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    print(&#39;Hi&#39;)</span><br><span class="line">    ^</span><br><span class="line">IndentationError: unexpected indent</span><br></pre></td></tr></table></figure>
 
 <p>​    可以发现，第二行的print(‘Hi’)前面有一个空格，程序直接爆出语法错误。</p>
-<h2 id="字符串详解"><a href="#字符串详解" class="headerlink" title="字符串详解"></a>字符串详解</h2><h3 id="2-1-字符串处理"><a href="#2-1-字符串处理" class="headerlink" title="2.1 字符串处理"></a>2.1 字符串处理</h3><h4 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h4><h4 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h4><h4 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h4><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="3-1-列表-list"><a href="#3-1-列表-list" class="headerlink" title="3.1 列表(list)"></a>3.1 列表(list)</h3><h3 id="3-2-元组-tuple"><a href="#3-2-元组-tuple" class="headerlink" title="3.2 元组(tuple)"></a>3.2 元组(tuple)</h3><h3 id="3-3-字典-dict"><a href="#3-3-字典-dict" class="headerlink" title="3.3 字典(dict)"></a>3.3 字典(dict)</h3><h3 id="3-4-集合-set"><a href="#3-4-集合-set" class="headerlink" title="3.4 集合(set)"></a>3.4 集合(set)</h3><h2 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h2><h3 id="4-1-选择结构——if"><a href="#4-1-选择结构——if" class="headerlink" title="4.1 选择结构——if"></a>4.1 选择结构——if</h3><h3 id="4-2-循环结构——While"><a href="#4-2-循环结构——While" class="headerlink" title="4.2 循环结构——While"></a>4.2 循环结构——While</h3><h3 id="4-3-迭代器——for"><a href="#4-3-迭代器——for" class="headerlink" title="4.3 迭代器——for"></a>4.3 迭代器——for</h3><h3 id="4-4-程序控制break与continue"><a href="#4-4-程序控制break与continue" class="headerlink" title="4.4 程序控制break与continue"></a>4.4 程序控制break与continue</h3><h2 id="函数与模块"><a href="#函数与模块" class="headerlink" title="函数与模块"></a>函数与模块</h2><h3 id="5-1-函数"><a href="#5-1-函数" class="headerlink" title="5.1 函数"></a>5.1 函数</h3><h3 id="5-2-模块"><a href="#5-2-模块" class="headerlink" title="5.2 模块"></a>5.2 模块</h3><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2>
+<h2 id="字符串详解"><a href="#字符串详解" class="headerlink" title="字符串详解"></a>字符串详解</h2><h3 id="2-1-字符串处理"><a href="#2-1-字符串处理" class="headerlink" title="2.1 字符串处理"></a>2.1 字符串处理</h3><h4 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h4><p>​    <em>问题引入：我想将两个或多个字符串拼接在一起，组成新的字符串，我该怎么办？</em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"Hello"</span></span><br><span class="line">str2 = <span class="string">"Python"</span></span><br><span class="line"></span><br><span class="line">print(str1+<span class="string">' '</span>+str2)</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出内容：</span></span><br><span class="line"><span class="string">Hello Python</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<p>​    通过上面例子，可以看到，拼接一个字符串我们可以通过 + 加号来连接。正如代码中，str1和str2两个字符串通过加号拼接在一起。而为了美观，我们又在str1和str2两个字符串中间加了一个空字符串，最后输出”Hello Python”。</p>
+<p>​    讲完Python字符串的拼接后，我们来看看，字符串的运算，以及上一篇没有说完的格式化字符串到底是什么一回事。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"A"</span> * <span class="number">10</span></span><br><span class="line"><span class="string">'AAAAAAAAAA'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"A"</span> == <span class="string">"B"</span></span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"A"</span> <span class="keyword">in</span> <span class="string">"ABC"</span></span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<p>​        先来看看字符串的一些运算，先看第一个例子，”A”后面乘于10后输出了10个”A”。假如我们要重复输出一个字符，这样是不是很方便？</p>
+<p>​        现在我们来看看后面两个例子，先来说说，他们输出的True和False到底是什么。其实这两个值，就是英文意思中的真和假。先来看看，”A” == “B” 其实很明显，就是判断A是否等于B，或者说A是不是B，很显然不是，所以输出了一个False。而后面的，”A” in “ABC”，意思是判断A是否在”ABC”这个字符串里面。所以输出True。</p>
+<p><strong><em>PS:</em></strong></p>
+<ol>
+<li><strong><em>True和False是关键字或者说保留字，也就是它们在Python中已经有了它们的意义。比如：我们可以通过返回结果是True还是False，来做判断。</em></strong></li>
+<li><strong><em>“=” 和 “==” 是不一样的。“=” 是用来赋值，而“==” 是用来做判断，后面我们学if语句的时候，需要小心</em></strong>。</li>
+</ol>
+<p>​    讲完了几个字符串的小技巧后，来说说上一篇落下的一个格式化字符串的内容。我们可以在实例：1.1.1程序中看到这样一行代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"您好，尊敬的%s"</span> % name)</span><br></pre></td></tr></table></figure>
+
+<p>​    前面我说过，print是一个输出函数，而print括号里面的东西，我们就可以理解为一个字符串。而这个%s 是什么意思呢？其实这个是不是很像前面所讲的format方法中的 {}。其实这个也可以理解为是一个占位符，但是这个占位符有点任性，后面输出的内容必须要按照它所指定的类型输出。比如上行代码中的 %s，它所指定的类型就是字符串类型，也就是说，我们后面要输出变量name的类型必须是一个字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">3</span></span><br><span class="line">name = <span class="string">"zhangsan"</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"name:%s age:%d"</span>%(name,age))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出内容：</span></span><br><span class="line"><span class="string">name:zhangsan age:3</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<p>​    来观察一下，可以发现%s确实是输出一个字符串，而我们要输出一个整数，注意是整数，可以用%d，而字符串后面必须要有一个 % 连接变量。而如果一次性要输出多个变量，那么我们要在%后面加个括号，在里面输入变量，并用逗号隔开，按照前面的字符串以及指定的类型，写入相应的变量才可以。</p>
+<p>​    这时你会问，假如这两个类型都不是我想输出的怎么办，我想输出一个小数？这样，你可以用%f来输出。除了上面提到的%s %d等格式化字符，其实也还有其他的，这里不一一例举，我在网上找了个图放在下面，请大家浏览一下，这些不需要记住，用到的时候可以去查一下。</p>
+<p><img src="https://img-blog.csdnimg.cn/20181225114514504.png" alt=""></p>
+<h4 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h4><p>​    Python给我们提供了很多内置函数，我们可以直接用这些函数来处理各种事情。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>RepStr = <span class="string">"aaaaa"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>RepStr.replace(<span class="string">"a"</span>,<span class="string">"b"</span>)</span><br><span class="line"><span class="string">'bbbbb'</span></span><br></pre></td></tr></table></figure>
+
+<p>​    首先是一个replace函数，这是一个替换函数，语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str.replace(old, new[, max])</span><br><span class="line">old:要替换的字符</span><br><span class="line">new:替换成什么字符</span><br><span class="line">max:要替换多少个(可选，如果不填则默认全部替换)</span><br></pre></td></tr></table></figure>
+
+<p>​    replace这个函数只能是字符串类型才可以使用，所以前面的变量必须是一个字符型。在第一个例子中，用replace函数将RepStr字符串中的“a”全部替换成了“b”。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>str1 = <span class="string">'00AAAA000'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str1.strip(<span class="string">'0'</span>)     <span class="comment">#去除指定字符 ‘0’</span></span><br><span class="line"><span class="string">'AAAA'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str2 = <span class="string">'      A  '</span>   <span class="comment">#去除空格</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str2.strip()</span><br><span class="line"><span class="string">'A'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str1 = <span class="string">'000AAAA000'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str1.rstrip(<span class="string">'0'</span>)  <span class="comment">#去除右边的指定字符</span></span><br><span class="line"><span class="string">'000AAAA'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str1.lstrip(<span class="string">'0'</span>)  <span class="comment">#去除左边的指定字符</span></span><br><span class="line"><span class="string">'AAAA000'</span></span><br></pre></td></tr></table></figure>
+
+<p>​    这里就列举几个常用的字符处理函数，如果有别的需求，如转换大小写等操作，可以去网上找找相关文档或手册查询相应函数即可。</p>
+<h4 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h4><p>​    <em>问题引入：需要查询字符串中的某一个字符</em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>str = <span class="string">'12345ABC'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str[<span class="number">0</span>]</span><br><span class="line"><span class="string">'1'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str[<span class="number">-1</span>]</span><br><span class="line"><span class="string">'C'</span></span><br></pre></td></tr></table></figure>
+
+<p>​    前面说过，python的索引是从0开始，0代表第一个元素，所以str[0]输出的就是第一个字符 “1”。而倒数，-1开始是倒数第一个字符，所以str[-1]输出最后一个字符”C”。</p>
+<p>​    <em>问题引入：需要截取字符串中的一段字符</em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>str = <span class="string">'12345ABC'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str[<span class="number">2</span>:<span class="number">-1</span>]</span><br><span class="line"><span class="string">'345AB'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str[<span class="number">1</span>:<span class="number">-1</span>:<span class="number">2</span>]</span><br><span class="line"><span class="string">'24A'</span></span><br></pre></td></tr></table></figure>
+
+<p>​    首先，来看看[:]这种用法会给我们截取出哪一段字符。前面说过正数是从0开始，所以索引为2的字符就是3，而索引为-1的就是最后一个字符，也就是”C”。而str[2:-1]，这个就是输出从str字符串的第三个字符到倒数第二字符。请注意，最后一个”C”是不会输出的。如果学过高中数学的朋友，可以发现这类似我们高中数学中的半开半闭区间。这里引入一个问题与探讨，各位可上机尝试：</p>
+<p><em>1.假如我要输出第三个字符到到最后一个字符，我该怎么办呢？</em></p>
+<p><em>2.试试输出str[:]，看看各位能发现什么</em></p>
+<p>​    最后，我们来看看序列的另一种用法。完整的序列格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[开始位置:结束位置:[步长]]</span><br><span class="line">步长是可选的</span><br></pre></td></tr></table></figure>
+
+<p>​    什么是步长呢？举个例子：假设，我要每隔两个数字，从1-10里面取出数字来。是不是就得到这样一个结果：1 3 5 7 9。而这个每隔两个数字就是步长，也就是2。</p>
+<p>​    好的，明白了步长是什么，那么就好解释为什么str[1 :-1：2] 会输出 ’24A‘了。首先抛开后面的2，前面的str[1:-1] 我们会取出：’2345AB’ 这样一个字符，而后面设置步长是2，那么每隔两个字符取出，也就是’24A’了。如果还不理解，可以自己动手画张图，将字符串标上正数的索引以及倒数的索引。</p>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="3-1-列表-list"><a href="#3-1-列表-list" class="headerlink" title="3.1 列表(list)"></a>3.1 列表(list)</h3><h3 id="3-2-元组-tuple"><a href="#3-2-元组-tuple" class="headerlink" title="3.2 元组(tuple)"></a>3.2 元组(tuple)</h3><h3 id="3-3-字典-dict"><a href="#3-3-字典-dict" class="headerlink" title="3.3 字典(dict)"></a>3.3 字典(dict)</h3><h3 id="3-4-集合-set"><a href="#3-4-集合-set" class="headerlink" title="3.4 集合(set)"></a>3.4 集合(set)</h3><h2 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h2><h3 id="4-1-选择结构——if"><a href="#4-1-选择结构——if" class="headerlink" title="4.1 选择结构——if"></a>4.1 选择结构——if</h3><h3 id="4-2-循环结构——While"><a href="#4-2-循环结构——While" class="headerlink" title="4.2 循环结构——While"></a>4.2 循环结构——While</h3><h3 id="4-3-迭代器——for"><a href="#4-3-迭代器——for" class="headerlink" title="4.3 迭代器——for"></a>4.3 迭代器——for</h3><h3 id="4-4-程序控制break与continue"><a href="#4-4-程序控制break与continue" class="headerlink" title="4.4 程序控制break与continue"></a>4.4 程序控制break与continue</h3><h2 id="函数与模块"><a href="#函数与模块" class="headerlink" title="函数与模块"></a>函数与模块</h2><h3 id="5-1-函数"><a href="#5-1-函数" class="headerlink" title="5.1 函数"></a>5.1 函数</h3><h3 id="5-2-模块"><a href="#5-2-模块" class="headerlink" title="5.2 模块"></a>5.2 模块</h3><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2>
       
 
       
